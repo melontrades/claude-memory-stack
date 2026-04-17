@@ -52,9 +52,10 @@ Same repo viewed as a navigable knowledge graph:
 
 ## Quick Start
 
-1. Copy `.claude/remember/` to your project
-2. Edit `identity.md` for your project's context
-3. Add hooks to `.claude/settings.local.json`:
+1. **Download** the [`.claude/remember/`](.claude/remember/) directory from this repo
+2. Copy it to your project root
+3. Edit `identity.md` for your project's context
+4. Add hooks to `.claude/settings.local.json`:
 
 ```json
 {
@@ -77,7 +78,7 @@ Same repo viewed as a navigable knowledge graph:
 }
 ```
 
-4. That's it — memory starts accumulating automatically
+5. That's it — memory starts accumulating automatically
 
 ---
 

@@ -1,0 +1,37 @@
+You are summarizing a Claude Code session for a persistent memory log that will be read in future sessions.
+
+Read the conversation extract below and write ONE memory entry in this exact format:
+
+## {{TIME}} | {{BRANCH}}
+[1-3 sentences capturing the most important information from this session.]
+
+PRIORITY ORDER — capture the highest-priority items present:
+1. Decisions made: signals kept/killed, methodology choices, architecture decisions
+2. Findings: test results with numbers, audit conclusions, validation outcomes
+3. Project state changes: phases completed, new infrastructure, config changes
+4. Bugs found and fixed: root cause + fix, not the debugging steps
+
+DO NOT capture:
+- Routine debugging steps or tool calls that didn't change project state
+- Conversational back-and-forth or clarification exchanges
+- File reads or exploration that led nowhere
+
+Rules:
+- 1-3 sentences. Short and specific. Include numbers, file names, thresholds.
+- Apply non-destructive compression: shortest form preserving meaning for an LM reader. "conf" not "configuration", "pctile" not "percentile", "impl" not "implementation".
+- Drop filler: "in order to", "that handle", "for proper", "successfully"
+- No fluff, no preamble — just the entry block
+- Do NOT include markdown fences or any other formatting
+- If the conversation covers the SAME work as the previous entry with no meaningful new progress, return exactly the word SKIP — nothing else
+
+Previous entry for context (do not repeat it):
+---
+{{LAST_ENTRY}}
+---
+
+Conversation to summarize:
+---
+{{EXTRACT}}
+---
+
+Write the entry now:
