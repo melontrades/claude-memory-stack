@@ -1,5 +1,7 @@
 # Claude Memory Stack
 
+![Claude Memory Stack Banner](banner.png)
+
 **Portable memory infrastructure for Claude Code — persistent context across sessions.**
 
 Claude Code is stateless by default. Every session starts fresh. After months of daily use, I was re-explaining the same context over and over:
