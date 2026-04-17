@@ -386,56 +386,7 @@ Note: Obsidian overwrites this file when you change settings in the UI.
 
 Color groups use `"query": "path:dirname/"` with `"color": {"a": 1, "rgb": NUMBER}`.
 
-### 3.4 Graph CSS Snippet (`.obsidian/snippets/graph-lines.css`)
-
-```css
-.theme-dark {
-  --graph-line: rgba(130, 145, 175, 0.28);
-  --graph-bg: #0d1117;
-  --graph-text: rgba(220, 225, 235, 0.9);
-  --graph-node: #6e7681;
-  --graph-node-focused: #58a6ff;
-}
-
-.graph-view.mod-3d,
-.graph-view canvas {
-  background-color: var(--graph-bg) !important;
-}
-
-.graph-view .graph-node:hover circle,
-.graph-view circle:hover {
-  filter: drop-shadow(0 0 6px rgba(88, 166, 255, 0.6));
-}
-
-.graph-view .is-focused circle {
-  stroke: #58a6ff;
-  stroke-width: 2px;
-  filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.5));
-}
-
-.graph-view .graph-link.is-highlighted,
-.graph-view line.is-highlighted {
-  stroke: rgba(88, 166, 255, 0.5) !important;
-  stroke-width: 2px !important;
-}
-
-.graph-view .graph-node.is-faded circle { opacity: 0.15; }
-.graph-view .graph-link.is-faded { opacity: 0.05; }
-
-.graph-view text {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-size: 11px;
-  fill: var(--graph-text);
-}
-
-.graph-view .graph-node text {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-}
-```
-
-Enable: Settings > Appearance > CSS snippets > toggle on.
-
-### 3.5 MOC (Map of Content) Pattern
+### 3.4 MOC (Map of Content) Pattern
 
 Create navigation hubs in a `knowledge/` directory:
 
@@ -495,7 +446,6 @@ Obsidian (optional, views same directory)
   |-- NotEMD batch-processes docs -> wiki-links + concept notes
   |-- Dataview renders queries in MOC files
   |-- Graph view + 3D Graph visualize connections
-  |-- CSS snippet styles the graph
   |-- .obsidianignore filters noise from graph
 ```
 
@@ -517,7 +467,6 @@ For a new project:
 - [ ] (Optional) Open project dir as Obsidian vault
 - [ ] (Optional) Install Obsidian plugins: Dataview, NotEMD, 3D Graph
 - [ ] (Optional) Create `.obsidianignore` for your file types
-- [ ] (Optional) Add CSS snippet for graph styling
 - [ ] (Optional) Create MOC files for navigation
 
 ---
